@@ -1,10 +1,13 @@
 {
   "name": "watchdog4cloudinary",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "监听Mac系统截图自动上传到cloudinary",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "watchdog4cloudinary": "index.js"
   },
   "repository": {
     "type": "git",
