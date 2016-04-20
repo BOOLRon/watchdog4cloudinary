@@ -1,6 +1,6 @@
 {
   "name": "watchdog4cloudinary",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "监听Mac系统截图自动上传到cloudinary",
   "main": "index.js",
   "scripts": {
