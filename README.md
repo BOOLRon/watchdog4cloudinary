@@ -30,6 +30,14 @@ cd ~ && vim cloudinary.conf
 
 ### usage
 
+先修改Mac系统截图自动保存的目录
+
+```
+mkdir ~/Desktop/up2cloudinary
+defaults write com.apple.screencapture location ~/Desktop/up2cloudinary/
+killall SystemUIServer
+```
+
 终端输入即可开启监听模式
 
 ```

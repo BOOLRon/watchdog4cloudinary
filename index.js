@@ -46,9 +46,6 @@ if (!fs.existsSync(syncDirPath)){
     fs.mkdirSync(syncDirPath);
 }
 
-exec('defaults write com.apple.screencapture location' + syncDirPath)
-exec('killall SystemUIServer')
-
 function performUploadByFilePath(filePath){
     log(`File ${filePath} has been added`);
 
