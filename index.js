@@ -55,7 +55,8 @@ function performUploadByFilePath(filePath){
     cloudinary.uploader.upload(filePath,function(result){
         var secure_url = result.secure_url;
         if(secure_url){
-            ncp.copy(secure_url,function(){
+            var copy_string = '![](' + secure_url + ')';
+            ncp.copy(copy_string,function(){
                 notify({
                     type: 'pass',
                     title: '图床',
