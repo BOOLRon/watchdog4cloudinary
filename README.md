@@ -1,7 +1,7 @@
 # watchdog4cloudinary
 监听Mac系统截图自动上传到cloudinary并返回截图的url
 
-![](http://7xsr3s.com1.z0.glb.clouddn.com/originMovie.gif)
+![image](https://github.com/BOOLRon/watchdog4cloudinary/blob/master/watchdog4cloudinary.gif)
 
 ### before
 
