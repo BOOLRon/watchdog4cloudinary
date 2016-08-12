@@ -51,10 +51,10 @@ if (!fs.existsSync(syncDirPath)){
 function performUploadByFilePath(filePath){
     log(`File ${filePath} has been added`);
 
-    // File uploader
-    cloudinary.uploader.upload(filePath,function(result){
+    // File upload stream
+    var stream = cloudinary.uploader.upload_stream(function(result) {
+        console.log(result)
         var secure_url = result.secure_url;
-       console.log(result);
         if(secure_url){
             var copy_string = '![](' + secure_url + ')';
             ncp.copy(copy_string,function(){
@@ -69,9 +69,9 @@ function performUploadByFilePath(filePath){
         }else {
 
         }
-      fs.unlinkSync(filePath);
+        fs.unlinkSync(filePath);
     });
-
+    var file_reader = fs.createReadStream(filePath).pipe(stream)
 }
 
 // One-liner for current directory, ignores .dotfiles
