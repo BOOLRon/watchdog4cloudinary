@@ -54,6 +54,7 @@ function performUploadByFilePath(filePath){
     // File uploader
     cloudinary.uploader.upload(filePath,function(result){
         var secure_url = result.secure_url;
+       console.log(result);
         if(secure_url){
             var copy_string = '![](' + secure_url + ')';
             ncp.copy(copy_string,function(){
